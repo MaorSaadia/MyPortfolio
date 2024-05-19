@@ -37,12 +37,11 @@ const RecentProjects = () => {
                     layout="fill"
                     objectFit="cover"
                   />
-                  {/* Update 1 */}
                 </div>
                 <Image
                   src={item.img}
                   alt="cover"
-                  layout="fill" // Update 2
+                  layout="fill"
                   objectFit="contain"
                   className="z-10 absolute bottom-0"
                 />
@@ -79,7 +78,6 @@ const RecentProjects = () => {
                         objectFit="contain"
                         className="p-2"
                       />
-                      {/* Update 3 */}
                     </div>
                   ))}
                 </div>
