@@ -3,10 +3,10 @@
 import { useRef } from "react";
 import { motion, useInView, useScroll } from "framer-motion";
 
-import About from "./components/about";
-import Skill from "./components/skill";
-import Brain from "./components/brain";
-import ScrollSvg from "./components/scroll";
+import About from "./components/About";
+import Skill from "./components/Skill";
+import Brain from "./components/Brain";
+import Scroll from "./components/Scroll";
 import { skills } from "./data";
 
 const Homepage = () => {
@@ -33,7 +33,7 @@ const Homepage = () => {
           <About />
 
           <div className="flex flex-col gap-12 justify-center">
-            <ScrollSvg />
+            <Scroll />
           </div>
 
           {/* SKILLS CONTAINER */}

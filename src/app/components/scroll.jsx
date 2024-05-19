@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 
-const ScrollSvg = () => {
+const Scroll = () => {
   return (
     <motion.svg
       initial={{ opacity: 0.2, y: 0 }}
@@ -25,4 +25,4 @@ const ScrollSvg = () => {
   );
 };
 
-export default ScrollSvg;
+export default Scroll;

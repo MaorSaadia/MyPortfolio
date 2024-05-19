@@ -5,7 +5,7 @@ import Image from "next/image";
 
 import { PinContainer } from "../ui/Pin";
 import { projects } from "../data";
-import ScrollSvg from "./scroll";
+import Scroll from "./Scroll";
 
 const RecentProjects = () => {
   return (
@@ -14,7 +14,7 @@ const RecentProjects = () => {
         My Works
       </div>
       <div className="flex gap-12 justify-center mt-10">
-        <ScrollSvg />
+        <Scroll />
       </div>
       <div className="flex flex-wrap items-center justify-center p-4 gap-x-24 gap-y-8 mt-10">
         {projects.map((item) => (

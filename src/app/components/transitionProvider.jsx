@@ -1,9 +1,10 @@
 "use client";
 
-import { AnimatePresence } from "framer-motion";
-import Navbar from "./navbar";
-import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
+import { motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
+
+import Navbar from "./navbar";
 
 const TransitionProvider = ({ children }) => {
   const pathName = usePathname();
