@@ -1,8 +1,9 @@
 "use client";
 
-import { motion, useInView, useScroll } from "framer-motion";
-import Skill from "./components/skill";
 import { useRef } from "react";
+import { motion, useInView, useScroll } from "framer-motion";
+
+import Skill from "./components/skill";
 import Brain from "./components/brain";
 
 const Homepage = () => {
