@@ -27,7 +27,7 @@ const Homepage = () => {
       transition={{ duration: 1 }}
     >
       {/* CONTAINER */}
-      <div className="h-full overflow-scroll lg:flex" ref={containerRef}>
+      <div className="h-full overflow-x-hidden lg:flex" ref={containerRef}>
         {/* TEXT CONTAINER */}
         <div className="p-4 sm:p-8 md:p-16 lg:p-20 xl:p-30 flex flex-col gap-8 md:gap-10 lg:gap-12 xl:gap-18 lg:w-2/3 lg:pr-0 xl:w-1/2">
           <About />

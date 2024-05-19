@@ -11,7 +11,7 @@ const PortfolioPage = () => {
       animate={{ y: "0%" }}
       transition={{ duration: 1 }}
     >
-      <div className="h-full overflow-scroll lg:flex justify-center">
+      <div className="h-full overflow-x-hidden lg:flex justify-center">
         <RecentProjects />
       </div>
     </motion.div>
