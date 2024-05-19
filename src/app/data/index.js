@@ -32,3 +32,25 @@ export const projects = [
     link: "/ui.apple.com",
   },
 ];
+
+export const skills = [
+  "JavaScript",
+  "TypeScript",
+  "React",
+  "NextJs",
+  "React Native",
+  "TanStackQuery",
+  "NodeJs",
+  "Express",
+  "MongoDB",
+  "SQL",
+  "HTML",
+  "CSS",
+  "Tailwind CSS",
+  "Bootstrap",
+  "Python",
+  "C",
+  "Git",
+  "Jest",
+  "Jira",
+];
