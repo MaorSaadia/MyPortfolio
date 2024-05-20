@@ -2,11 +2,12 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { MoonIcon, SunIcon } from "./Icons";
 import Image from "next/image";
 import Link from "next/link";
+
 import NavLink from "./NavLink";
 import useThemeSwitcher from "../hooks/useThemeSwitcher";
-import { MoonIcon, SunIcon } from "./Icons";
 
 const links = [
   { url: "/", title: "Home" },
@@ -17,6 +18,7 @@ const links = [
 const NavBar = () => {
   const [mode, setMode] = useThemeSwitcher();
   const [open, setOpen] = useState(false);
+  console.log("Current mode:", mode);
 
   const topVariants = {
     closed: {
@@ -81,13 +83,25 @@ const NavBar = () => {
       {/* LOGO */}
 
       {/* SOCIAL */}
-      <div className="hidden md:flex gap-4 w-1/6">
+      <div className="hidden md:flex gap-4 w-1/6 ">
         <Link href="/">
           <Image src="/github.png" alt="" width={24} height={24} />
         </Link>
         <Link href="/">
           <Image src="/linkedin.png" alt="" width={24} height={24} />
         </Link>
+        <button
+          onClick={() => setMode(mode === "light" ? "dark" : "light")}
+          className={`justify-center rounded-full 
+          ${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"}
+          `}
+        >
+          {mode === "dark" ? (
+            <SunIcon className={"fill-dark"} />
+          ) : (
+            <MoonIcon className={"fill-dark"} />
+          )}
+        </button>
       </div>
 
       {/* RESPONSIVE MENU */}
@@ -130,18 +144,6 @@ const NavBar = () => {
                 <Link href={link.url}>{link.title}</Link>
               </motion.div>
             ))}
-            <button
-              onClick={() => setMode(mode === "light" ? "dark" : "light")}
-              className={`ml-3 flex items-center justify-center rounded-full p-1
-          ${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"}
-          `}
-            >
-              {mode === "dark" ? (
-                <SunIcon className={"fill-dark"} />
-              ) : (
-                <MoonIcon className={"fill-dark"} />
-              )}
-            </button>
           </motion.div>
         )}
       </div>

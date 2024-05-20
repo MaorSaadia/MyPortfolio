@@ -1,6 +1,6 @@
 "use client";
 
-import RecentProjects from "../components/recentProjects";
+import RecentProjects from "../components/RecentProjects";
 import { motion } from "framer-motion";
 
 const PortfolioPage = () => {
