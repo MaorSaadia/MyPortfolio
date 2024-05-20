@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import NavLink from "./NavLink";
+import useThemeSwitcher from "../hooks/useThemeSwitcher";
+import { MoonIcon, SunIcon } from "./Icons";
 
 const links = [
   { url: "/", title: "Home" },
@@ -12,7 +14,8 @@ const links = [
   { url: "/contact", title: "Contact" },
 ];
 
-const Navbar = () => {
+const NavBar = () => {
+  const [mode, setMode] = useThemeSwitcher();
   const [open, setOpen] = useState(false);
 
   const topVariants = {
@@ -86,6 +89,7 @@ const Navbar = () => {
           <Image src="/linkedin.png" alt="" width={24} height={24} />
         </Link>
       </div>
+
       {/* RESPONSIVE MENU */}
       <div className="md:hidden">
         {/* MENU BUTTON */}
@@ -126,6 +130,18 @@ const Navbar = () => {
                 <Link href={link.url}>{link.title}</Link>
               </motion.div>
             ))}
+            <button
+              onClick={() => setMode(mode === "light" ? "dark" : "light")}
+              className={`ml-3 flex items-center justify-center rounded-full p-1
+          ${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"}
+          `}
+            >
+              {mode === "dark" ? (
+                <SunIcon className={"fill-dark"} />
+              ) : (
+                <MoonIcon className={"fill-dark"} />
+              )}
+            </button>
           </motion.div>
         )}
       </div>
@@ -133,4 +149,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavBar;

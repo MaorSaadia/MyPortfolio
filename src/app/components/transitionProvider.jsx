@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import { AnimatePresence } from "framer-motion";
 
-import Navbar from "./navbar";
+import NavBar from "./navbar";
 
 const TransitionProvider = ({ children }) => {
   const pathName = usePathname();
@@ -36,7 +36,7 @@ const TransitionProvider = ({ children }) => {
           animate={{ height: "0vh", transition: { delay: 0.5 } }}
         />
         <div className="h-24">
-          <Navbar />
+          <NavBar />
         </div>
         <div className="h-[calc(100vh-6rem)]">{children}</div>
       </div>
