@@ -18,33 +18,36 @@ const links = [
 const NavBar = () => {
   const [mode, setMode] = useThemeSwitcher();
   const [open, setOpen] = useState(false);
-  console.log("Current mode:", mode);
 
   const topVariants = {
     closed: {
       rotate: 0,
+      backgroundColor: mode === "light" ? "#000000" : "#ffffff",
     },
     opened: {
       rotate: 45,
-      backgroundColor: "rgb(255,255,255)",
+      backgroundColor: mode === "light" ? "#000000" : "#ffffff",
     },
   };
   const centerVariants = {
     closed: {
       opacity: 1,
+      backgroundColor: mode === "light" ? "#000000" : "#ffffff",
     },
     opened: {
       opacity: 0,
+      backgroundColor: mode === "light" ? "#000000" : "#ffffff",
     },
   };
 
   const bottomVariants = {
     closed: {
       rotate: 0,
+      backgroundColor: mode === "light" ? "#000000" : "#ffffff",
     },
     opened: {
       rotate: -45,
-      backgroundColor: "rgb(255,255,255)",
+      backgroundColor: mode === "light" ? "#000000" : "#ffffff",
     },
   };
 
@@ -73,7 +76,7 @@ const NavBar = () => {
   };
 
   return (
-    <div className="h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-xl">
+    <div className="h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-xl dark:text-light">
       {/* LINKS */}
       <div className="hidden md:flex gap-4 w-1/3">
         {links.map((link) => (
@@ -108,23 +111,23 @@ const NavBar = () => {
       <div className="md:hidden">
         {/* MENU BUTTON */}
         <button
-          className="w-10 h-8 flex flex-col justify-between z-50 relative"
+          className="w-10 h-8 flex flex-col justify-between z-50 relative "
           onClick={() => setOpen((prev) => !prev)}
         >
           <motion.div
             variants={topVariants}
             animate={open ? "opened" : "closed"}
-            className="w-10 h-1 bg-black rounded origin-left"
+            className="w-10 h-1 bg-white rounded origin-left"
           ></motion.div>
           <motion.div
             variants={centerVariants}
             animate={open ? "opened" : "closed"}
-            className="w-10 h-1 bg-black rounded"
+            className="w-10 h-1 bg-white rounded"
           ></motion.div>
           <motion.div
             variants={bottomVariants}
             animate={open ? "opened" : "closed"}
-            className="w-10 h-1 bg-black rounded origin-left"
+            className="w-10 h-1 bg-white rounded origin-left"
           ></motion.div>
         </button>
         {/* MENU LIST */}
@@ -133,7 +136,7 @@ const NavBar = () => {
             variants={listVariants}
             initial="closed"
             animate="opened"
-            className="absolute top-0 left-0 w-screen h-screen bg-black text-white flex flex-col items-center justify-center gap-8 text-4xl z-40"
+            className="absolute top-0 left-0 w-screen h-screen bg-white text-black dark:bg-black dark:text-white flex flex-col items-center justify-center gap-8 text-4xl z-40"
           >
             {links.map((link) => (
               <motion.div
@@ -144,6 +147,18 @@ const NavBar = () => {
                 <Link href={link.url}>{link.title}</Link>
               </motion.div>
             ))}
+            <button
+              onClick={() => setMode(mode === "light" ? "dark" : "light")}
+              className={`justify-center rounded-full p-2
+          ${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"}
+          `}
+            >
+              {mode === "dark" ? (
+                <SunIcon className={"fill-dark"} />
+              ) : (
+                <MoonIcon className={"fill-dark"} />
+              )}
+            </button>
           </motion.div>
         )}
       </div>

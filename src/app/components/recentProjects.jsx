@@ -9,8 +9,8 @@ import Scroll from "./Scroll";
 
 const RecentProjects = () => {
   return (
-    <div className="py-20">
-      <div className="sm:h-[calc(40vh-6rem)] md:h-[calc(30vh-6rem)] lg:h-[calc(20vh-6rem)] flex items-center justify-center text-8xl text-center">
+    <div className="py-10">
+      <div className="flex items-center justify-center text-8xl text-center dark:text-white">
         My Works
       </div>
       <div className="flex gap-12 justify-center mt-10">

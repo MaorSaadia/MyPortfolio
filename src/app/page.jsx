@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import { motion, useInView, useScroll } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 
 // import Brain from "./components/Brain";
 import About from "./components/About";
@@ -13,7 +13,7 @@ import { skills } from "./data";
 const Homepage = () => {
   const containerRef = useRef();
 
-  const { scrollYProgress } = useScroll({ container: containerRef });
+  // const { scrollYProgress } = useScroll({ container: containerRef });
 
   const skillRef = useRef();
 
@@ -28,9 +28,9 @@ const Homepage = () => {
       transition={{ duration: 1 }}
     >
       {/* CONTAINER */}
-      <div className="h-full overflow-x-hidden " ref={containerRef}>
+      <div className="h-full overflow-x-hidden" ref={containerRef}>
         {/* TEXT CONTAINER */}
-        <div className="p-4 sm:p-8 md:p-16 lg:p-20 xl:p-30 flex flex-col gap-8 md:gap-10 lg:gap-12 xl:gap-18 lg:w-2/3 lg:pr-0 xl:w-1/2">
+        <div className="p-4 sm:p-8 md:p-16 lg:p-20 xl:p-30 flex flex-col gap-8 md:gap-10 lg:gap-12 xl:gap-18 lg:w-2/3 lg:pr-0 xl:w-1/2 dark:text-white">
           <About />
 
           <div className="flex flex-col gap-12 justify-center">
