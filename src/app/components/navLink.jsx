@@ -8,9 +8,10 @@ const NavLink = ({ link }) => {
 
   return (
     <Link
-      className={`rounded p-1 ${
-        pathName === link.url &&
-        "bg-black dark:bg-light text-white dark:text-dark "
+      className={`rounded p-1 hover ${
+        pathName === link.url
+          ? "bg-black dark:bg-light text-white dark:text-dark"
+          : "hover:bg-black hover:dark:bg-light hover:text-light hover:dark:text-dark"
       }`}
       href={link.url}
     >
