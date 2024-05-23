@@ -1,10 +1,8 @@
 "use client";
 
 import RecentProjects from "../components/RecentProjects";
-import { motion } from "framer-motion";
 import Scroll from "../components/Scroll";
 import TransitionEffect from "@/components/TransitionEffect";
-import { usePathname } from "next/navigation";
 
 const PortfolioPage = () => {
   return (

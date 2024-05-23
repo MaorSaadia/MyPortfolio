@@ -1,13 +1,12 @@
-import Layout from "@/components/Layout";
 import Head from "next/head";
-import AnimatedText from "../components/AnimatedText";
 import Link from "next/link";
+
+import Layout from "@/components/Layout";
 import { LinkArrow } from "../components/Icons";
-import HireMe from "../components/HireMe";
 import TransitionEffect from "@/components/TransitionEffect";
-// import HireMe from "./components/HireMe";
-// import lightBulb from "../../public/images/svgs/miscellaneous_icons_1.svg";
-// import TransitionEffect from "@/components/TransitionEffect";
+import AnimatedText from "../components/AnimatedText";
+
+// const programing = "/programing.jpg";
 
 export default function Home() {
   return (
@@ -20,19 +19,20 @@ export default function Home() {
       <main className="flex items-center text-dark w-full min-h-screen dark:text-light">
         <Layout className="pt-0 md:pt-16 sm:pt-8">
           <div className="flex items-center justify-between w-full lg:flex-col">
-            {/* <div className="w-1/2 md:w-full">
-              <Image
-                src={caillet}
-                alt="Tyler"
-                className="w-full h-auto lg:hidden md:inline-block md:w-full"
-                priority
-                sizes="(max-width: 768px) 100vw,
-                  (max-width: 1200px) 50vw,
-                  50vw"
-              />
-            </div> */}
+            <div className="w-1/2 md:w-full">
+              {/* <Image
+                src={programing}
+                alt="M"
+                responsive="true"
+                width={700}
+                height={700}
+                className="rounded-full 
+                //h-autow-fullmax-h-[700px]max-w-[700px]"
+                priority={true}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
+              /> */}
+            </div>
             <div className="flex flex-col items-center self-center lg:w-full lg:text-center">
-              <h1> </h1>
               <AnimatedText
                 text="Turning Vision Into Reality With Code And Design."
                 className="!text-6xl !text-left 
@@ -47,7 +47,7 @@ export default function Home() {
               </p>
               <div className="flex items-center self-start mt-2 lg:self-center">
                 <Link
-                  href="https://docs.google.com/document/d/1VDPf4qj9IdM4qRQ5EK9IoFhKWFiUx8tfDl0k7N1E8ww/edit?usp=sharing"
+                  href="myresume.pdf"
                   target={"_blank"}
                   className="flex items-center bg-dark text-light p-2.5 px-6
                     rounded-lg text-lg font-semibold hover:bg-light hover:text-dark
@@ -68,6 +68,7 @@ export default function Home() {
               </div>
             </div>
           </div>
+          {/* <About /> */}
         </Layout>
 
         {/* <HireMe />
