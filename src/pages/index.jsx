@@ -1,13 +1,13 @@
 import Layout from "@/components/Layout";
 import Head from "next/head";
-import Image from "next/image";
-import caillet from "../../public/images/IMG_2131-transformed.png";
-import AnimatedText from "@/components/AnimatedText";
+import AnimatedText from "../components/AnimatedText";
 import Link from "next/link";
-import { LinkArrow } from "@/components/Icons";
-import HireMe from "@/components/HireMe";
-import lightBulb from "../../public/images/svgs/miscellaneous_icons_1.svg";
+import { LinkArrow } from "../components/Icons";
+import HireMe from "../components/HireMe";
 import TransitionEffect from "@/components/TransitionEffect";
+// import HireMe from "./components/HireMe";
+// import lightBulb from "../../public/images/svgs/miscellaneous_icons_1.svg";
+// import TransitionEffect from "@/components/TransitionEffect";
 
 export default function Home() {
   return (
@@ -20,7 +20,7 @@ export default function Home() {
       <main className="flex items-center text-dark w-full min-h-screen dark:text-light">
         <Layout className="pt-0 md:pt-16 sm:pt-8">
           <div className="flex items-center justify-between w-full lg:flex-col">
-            <div className="w-1/2 md:w-full">
+            {/* <div className="w-1/2 md:w-full">
               <Image
                 src={caillet}
                 alt="Tyler"
@@ -30,8 +30,8 @@ export default function Home() {
                   (max-width: 1200px) 50vw,
                   50vw"
               />
-            </div>
-            <div className="w-1/2 flex flex-col items-center self-center lg:w-full lg:text-center">
+            </div> */}
+            <div className="flex flex-col items-center self-center lg:w-full lg:text-center">
               <h1> </h1>
               <AnimatedText
                 text="Turning Vision Into Reality With Code And Design."
@@ -70,10 +70,10 @@ export default function Home() {
           </div>
         </Layout>
 
-        <HireMe />
+        {/* <HireMe />
         <div className="absolute right-8 bottom-8 inline-block w-24 md:hidden">
           <Image src={lightBulb} alt="Tyler" className="w-full h-auto" />
-        </div>
+        </div> */}
       </main>
     </>
   );
