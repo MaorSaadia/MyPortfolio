@@ -27,9 +27,7 @@ const Homepage = () => {
       animate={{ y: "0%" }}
       transition={{ duration: 1 }}
     >
-      {/* CONTAINER */}
       <div className="h-full overflow-x-hidden" ref={containerRef}>
-        {/* TEXT CONTAINER */}
         <div className="p-4 sm:p-8 md:p-16 lg:p-20 xl:p-30 flex flex-col gap-8 md:gap-10 lg:gap-12 xl:gap-18 lg:w-2/3 lg:pr-0 xl:w-1/2 dark:text-white">
           <About />
 
@@ -37,9 +35,7 @@ const Homepage = () => {
             <Scroll />
           </div>
 
-          {/* SKILLS CONTAINER */}
           <div className="flex flex-col gap-12 justify-center " ref={skillRef}>
-            {/* SKILL TITLE */}
             <motion.h1
               initial={{ x: "-300px" }}
               animate={isSkillRefInView ? { x: 0 } : {}}
@@ -48,7 +44,6 @@ const Homepage = () => {
             >
               SKILLS
             </motion.h1>
-            {/* SKILL LIST */}
             <motion.div
               initial={{ x: "-300px" }}
               animate={isSkillRefInView ? { x: 0 } : {}}
