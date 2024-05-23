@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { MoonIcon, SunIcon } from "./Icons";
+import { LinkedInIcon, GithubIcon, MoonIcon, SunIcon } from "./Icons";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -86,13 +86,33 @@ const NavBar = () => {
       {/* LOGO */}
 
       {/* SOCIAL */}
-      <div className="hidden md:flex gap-4 w-1/6 ">
-        <Link href="/">
+      <div className="hidden md:flex gap-4 w-1/7 ">
+        {/* <Link href="/">
           <Image src="/github.png" alt="" width={24} height={24} />
         </Link>
         <Link href="/">
           <Image src="/linkedin.png" alt="" width={24} height={24} />
-        </Link>
+        </Link> */}
+        <nav className="flex items-center justify-center flex-wrap">
+          <motion.a
+            whileHover={{ y: -2 }}
+            whileTap={{ scale: 0.9 }}
+            className="w-6 mx-3"
+            href="https://github.com/MaorSaadia"
+            target={"_blank"}
+          >
+            <GithubIcon />
+          </motion.a>
+          <motion.a
+            whileHover={{ y: -2 }}
+            whileTap={{ scale: 0.9 }}
+            className="w-6 mx-3"
+            href="https://www.linkedin.com/in/maor-saadia-2022b7289/"
+            target={"_blank"}
+          >
+            <LinkedInIcon />
+          </motion.a>
+        </nav>
         <button
           onClick={() => setMode(mode === "light" ? "dark" : "light")}
           className={`justify-center rounded-full 

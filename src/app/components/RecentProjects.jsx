@@ -10,7 +10,7 @@ import { projects } from "../data";
 const RecentProjects = () => {
   return (
     <>
-      <div className="flex flex-wrap items-center justify-center p-16 xs:gap-y-60 sm:gap-y-10 gap-x-20 xs:mt-32 sm:mt-4">
+      <div className="flex flex-wrap items-center justify-center p-16 xxs:gap-y-60 sm:gap-y-10 gap-x-20 xs:mt-32 sm:mt-4">
         {projects.map((item) => (
           <div
             className="sm:h-[41rem] h-[32rem] lg:min-h-[32.5rem] flex items-center justify-center sm:w-[570px] w-[80vw]"

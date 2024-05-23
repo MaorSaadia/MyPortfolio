@@ -15,6 +15,8 @@ module.exports = {
       // },
       screens: {
         xs: "540px", // min-width
+        xxs: "340px", // min-width
+        // xxs: { max: "640px" },
       },
       colors: {
         dark: "#1b1b1b",
