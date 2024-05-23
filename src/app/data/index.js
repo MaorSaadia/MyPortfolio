@@ -3,9 +3,16 @@ export const projects = [
     id: 1,
     title: "SCEWMS – Equipment Lending Platform",
     des: "Dynamic web application leveraging the MERN stack to facilitate the lending of various products for defined durations real-time tracking functionality, enabling management to monitor equipment whereabouts and borrower details seamlessly.",
-    img: "/p1.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+    img: "/SCEWMS.png",
+    iconLists: [
+      "/re.svg",
+      "/nodejs.svg",
+      "/mongodb.svg",
+      "/bootstrap.svg",
+      "/jwt.svg",
+    ],
     link: "/ui.earth.com",
+    git: "https://github.com/MaorSaadia/SCEWMS",
   },
   {
     id: 2,
@@ -14,6 +21,7 @@ export const projects = [
     img: "/p2.svg",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
     link: "/ui.yoom.com",
+    git: "/",
   },
   {
     id: 3,
@@ -22,6 +30,7 @@ export const projects = [
     img: "/p3.svg",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
     link: "/ui.aiimg.com",
+    git: "/",
   },
   {
     id: 4,
@@ -30,6 +39,7 @@ export const projects = [
     img: "/p4.svg",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
     link: "/ui.apple.com",
+    git: "/",
   },
 ];
 
