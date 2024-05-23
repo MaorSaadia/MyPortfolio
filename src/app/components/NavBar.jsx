@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { LinkedInIcon, GithubIcon, MoonIcon, SunIcon } from "./Icons";
-import Image from "next/image";
 import Link from "next/link";
 
 import NavLink from "./NavLink";
@@ -115,7 +114,7 @@ const NavBar = () => {
         </nav>
         <button
           onClick={() => setMode(mode === "light" ? "dark" : "light")}
-          className={`justify-center rounded-full 
+          className={`justify-center rounded-full p-1
           ${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"}
           `}
         >
