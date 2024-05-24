@@ -4,7 +4,7 @@ import RecentProjects from "../components/RecentProjects";
 import Scroll from "../components/Scroll";
 import TransitionEffect from "@/components/TransitionEffect";
 
-const PortfolioPage = () => {
+const Projects = () => {
   return (
     <div className="h-full overflow-x-hidden lg:flex justify-center">
       <div className="py-10">
@@ -22,4 +22,4 @@ const PortfolioPage = () => {
   );
 };
 
-export default PortfolioPage;
+export default Projects;

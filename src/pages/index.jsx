@@ -52,12 +52,14 @@ export default function Home() {
                 text="Hi, I Am Maor Saadia"
                 className="!text-6xl !text-left 
                   xl:!text-7xl lg:!text-center lg:!text=8xl md:!text-7xl 
+                  xs:!text-6xl
                   "
               />
               <AnimatedText
                 text="FullStack Developer"
                 className="!text-4xl !text-left 
                   xl:!text-5xl lg:!text-center lg:!text=6xl md:!text-5xl 
+                  xs:!text-5xl
                   "
               />
               <p className="my-4 text-base font-medium xs:text-xl lg:text-2xl">

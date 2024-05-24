@@ -6,7 +6,7 @@ const Footer = () => {
       className="w-full border-t-2 border-solid border-dark font-medium text-lg
     dark:border-light dark:text-light"
     >
-      <Layout className="py-8 flex items-center justify-between md:flex-row xs:py-6 xs:flex-col">
+      <Layout className="py-8 flex items-center justify-between md:flex-row xs:py-2 xs:flex-col">
         <span className="text-sm md:text-lg">
           {new Date().getFullYear()} &copy; All Rights Resarved.
         </span>
