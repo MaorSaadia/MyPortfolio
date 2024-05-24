@@ -162,6 +162,7 @@ const NavBar = () => {
                 variants={listItemVariants}
                 className=""
                 key={link.title}
+                onClick={() => setOpen((prev) => !prev)}
               >
                 <Link href={link.url}>{link.title}</Link>
               </motion.div>
