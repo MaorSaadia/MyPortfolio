@@ -1,15 +1,30 @@
 import Head from "next/head";
 import Link from "next/link";
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 
-import Layout from "@/components/Layout";
 import { LinkArrow } from "../components/Icons";
+import Layout from "@/components/Layout";
 import TransitionEffect from "@/components/TransitionEffect";
 import AnimatedText from "../components/AnimatedText";
 import HireMe from "@/components/HireMe";
+import Scroll from "@/components/Scroll";
+import Skill from "@/components/Skill";
+import Education from "@/components/Education";
+import { skills } from "@/data";
 
 // const programing = "/programing.jpg";
 
 export default function Home() {
+  const containerRef = useRef();
+
+  // const { scrollYProgress } = useScroll({ container: containerRef });
+
+  const skillRef = useRef();
+
+  // const isSkillRefInView = useInView(skillRef, {once:true});
+  const isSkillRefInView = useInView(skillRef, { margin: "-100px" });
+
   return (
     <>
       <Head>
@@ -19,7 +34,10 @@ export default function Home() {
       <TransitionEffect />
       <main className="flex items-center text-dark w-full min-h-screen dark:text-light">
         <Layout className="pt-0 md:pt-16 sm:pt-8">
-          <div className="flex items-center justify-between w-full lg:flex-col">
+          <div
+            className="flex items-center justify-between w-full lg:flex-col"
+            ref={containerRef}
+          >
             <div className="w-1/2 md:w-full">
               {/* <Image
                 src={programing}
@@ -35,16 +53,22 @@ export default function Home() {
             </div>
             <div className="flex flex-col items-center self-center lg:w-full lg:text-center">
               <AnimatedText
-                text="Turning Vision Into Reality With Code And Design."
+                text="Hi, I Am Maor Saadia"
                 className="!text-6xl !text-left 
+                  xl:!text-7xl lg:!text-center lg:!text=8xl md:!text-7xl 
+                  "
+              />
+              <AnimatedText
+                text="FullStack Developer"
+                className="!text-4xl !text-left 
                   xl:!text-5xl lg:!text-center lg:!text=6xl md:!text-5xl 
                   "
               />
-              <p className="my-4 text-base font-medium md:text-sm sm:text-xs">
-                As a skilled full-stack developer, I am dedicated to turning
-                ideas into innovative web applications. Explore my latest
-                projects, showcasing my expertise in React.js and web
-                development.
+              <p className="my-4 text-base font-medium xs:text-xl lg:text-2xl">
+                Software Engineer Developer with Expertise in The MERN (MongoDB,
+                Express.js, React.js, Node.js). I love developing websites and
+                applications that create meaningful user experiences and expand
+                my knowledge in new modern technologies.
               </p>
               <div className="flex items-center self-start mt-2 lg:self-center">
                 <Link
@@ -54,18 +78,50 @@ export default function Home() {
                     rounded-lg text-lg font-semibold hover:bg-light hover:text-dark
                     border-2 border-solid border-transparent hover:border-dark
                     dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light
-                    md:p-2 md:px-4 md:text-base
                     "
                 >
                   Resume <LinkArrow className={"w-6 ml-1"} />
                 </Link>
-                {/* <Link
-                  href="mailto:tylercaillet2121@gmail.com"
+                <Link
+                  href="/projects"
                   target={"_blank"}
                   className="ml-4 text-lg font-medium capitalize text-dark underline dark:text-light md:text-base"
                 >
-                  Contact
-                </Link> */}
+                  My Works
+                </Link>
+              </div>
+              <div className="flex flex-col gap-12 justify-center mt-8">
+                <Scroll />
+              </div>
+              <div
+                className="flex flex-col gap-12 justify-center mt-8"
+                ref={skillRef}
+              >
+                <motion.h1
+                  initial={{ x: "-300px" }}
+                  animate={isSkillRefInView ? { x: 0 } : {}}
+                  transition={{ delay: 0.2 }}
+                  className="font-bold text-2xl"
+                >
+                  SKILLS
+                </motion.h1>
+                <motion.div
+                  initial={{ x: "-300px" }}
+                  animate={isSkillRefInView ? { x: 0 } : {}}
+                  className="flex gap-4 flex-wrap"
+                >
+                  {skills.map((skill, index) => (
+                    <Skill
+                      key={index}
+                      name={skill}
+                      isSkillRefInView={isSkillRefInView}
+                    />
+                  ))}
+                </motion.div>
+                <div className="flex flex-col gap-12 justify-center items-center  mt-8">
+                  <Scroll />
+                </div>
+                <Education />
               </div>
             </div>
           </div>

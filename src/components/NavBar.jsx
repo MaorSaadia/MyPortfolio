@@ -2,11 +2,11 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { LinkedInIcon, GithubIcon, MoonIcon, SunIcon } from "./Icons";
 import Link from "next/link";
 
 import NavLink from "./NavLink";
 import useThemeSwitcher from "../hooks/useThemeSwitcher";
+import { LinkedInIcon, GithubIcon, MoonIcon, SunIcon } from "./Icons";
 
 const links = [
   { url: "/", title: "Home" },
