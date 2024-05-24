@@ -50,11 +50,11 @@ export default function Home() {
             <div className="flex flex-col md:items-center md:self-center md:w-full md:text-center">
               <AnimatedText
                 text="Hi, I Am Maor Saadia"
-                className="text-base xs:text-3xl md:text-5xl lg:text-7xl"
+                className="text-base xs:text-4xl md:text-5xl lg:text-7xl"
               />
               <AnimatedText
                 text="FullStack Developer"
-                className="text-base xs:text-xl md:text-3xl lg:text-5xl"
+                className="text-base xs:text-2xl md:text-4xl lg:text-5xl"
               />
               <p className="my-4 text-base font-medium xs:text-sm lg:text-2xl">
                 Software Engineer Developer with Ex pertise in The MERN
@@ -77,12 +77,12 @@ export default function Home() {
                 <Link
                   href="/projects"
                   target={"_blank"}
-                  className="ml-4 text-lg font-medium capitalize text-dark underline dark:text-light md:text-base"
+                  className="ml-4 xs:text-sm font-medium capitalize text-dark underline dark:text-light md:text-base"
                 >
                   My Works
                 </Link>
               </div>
-              <div className="mt-8">
+              <div className="flex flex-col mt-8 justify-center items-center">
                 <Scroll />
               </div>
               <div
@@ -110,7 +110,7 @@ export default function Home() {
                     />
                   ))}
                 </motion.div>
-                <div className="flex flex-col gap-12 justify-center items-center ">
+                <div className="flex flex-col gap-12 justify-center items-center">
                   <Scroll />
                 </div>
                 <Education />
