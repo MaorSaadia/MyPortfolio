@@ -47,7 +47,7 @@ export default function Home() {
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
               /> */}
             </div>
-            <div className="flex flex-col items-center self-center w-full text-center">
+            <div className="flex flex-col md:items-center md:self-center md:w-full md:text-center">
               <AnimatedText
                 text="Hi, I Am Maor Saadia"
                 className="text-base xs:text-3xl md:text-5xl lg:text-7xl"
