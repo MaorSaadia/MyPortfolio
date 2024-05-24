@@ -50,11 +50,11 @@ export default function Home() {
             <div className="flex flex-col items-center self-center w-full text-center">
               <AnimatedText
                 text="Hi, I Am Maor Saadia"
-                className="xs:text-6xl lg:text-7xl"
+                className="text-base xs:text-4xl lg:text-7xl"
               />
               <AnimatedText
                 text="FullStack Developer"
-                className="xs:text-3xl lg:text-5xl"
+                className="text-base xs:text-2xl lg:text-5xl"
               />
               <p className="my-4 text-base font-medium xs:text-xl lg:text-2xl">
                 Software Engineer Developer with Ex pertise in The MERN
