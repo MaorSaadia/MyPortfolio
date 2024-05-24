@@ -29,7 +29,7 @@ export default function Home() {
       </Head>
       <TransitionEffect />
       <main className="flex items-center text-dark w-full min-h-screen dark:text-light">
-        <Layout className="pt-0 md:pt-16 sm:pt-8">
+        <Layout className="pt-0 ">
           <div
             className="flex items-center justify-between w-full flex-col"
             ref={containerRef}
@@ -50,23 +50,17 @@ export default function Home() {
             <div className="flex flex-col items-center self-center w-full text-center">
               <AnimatedText
                 text="Hi, I Am Maor Saadia"
-                className="!text-6xl !text-left 
-                  xl:!text-7xl lg:!text-center lg:!text=8xl md:!text-7xl 
-                  xs:!text-6xl
-                  "
+                className="xs:text-6xl lg:text-7xl"
               />
               <AnimatedText
                 text="FullStack Developer"
-                className="!text-4xl !text-left 
-                  xl:!text-5xl lg:!text-center lg:!text=6xl md:!text-5xl 
-                  xs:!text-5xl
-                  "
+                className="xs:text-3xl lg:text-5xl"
               />
               <p className="my-4 text-base font-medium xs:text-xl lg:text-2xl">
-                Software Engineer Developer with Expertise in The MERN (MongoDB,
-                Express.js, React.js, Node.js). I love developing websites and
-                applications that create meaningful user experiences and expand
-                my knowledge in new modern technologies.
+                Software Engineer Developer with Ex pertise in The MERN
+                (MongoDB, Express.js, React.js, Node.js). I love developing
+                websites and applications that create meaningful user
+                experiences and expand my knowledge in new modern technologies.
               </p>
               <div className="flex items-center self-start mt-2 lg:self-center">
                 <Link
