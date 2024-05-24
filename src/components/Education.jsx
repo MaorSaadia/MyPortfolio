@@ -16,10 +16,10 @@ const Details = ({ type, time, place, info }) => {
         whileInView={{ y: 0 }}
         transition={{ duration: 0.5, type: "spring" }}
       >
-        <h3 className="capitalize font-bold text-2xl sm:text-xl xs:text-lg">
+        <h3 className="capitalize font-bold sm:text-xl md:text-2xl xs:text-lg">
           {type}
         </h3>
-        <span className="capitalize font-medium text-dark/75 dark:text-light/75 xs:text-sm">
+        <span className="capitalize font-medium text-dark/75 dark:text-light/75 md:text-lg xs:text-sm">
           {time} | {place}
         </span>
         <p className="font-medium w-full md:text-sm">{info}</p>
@@ -36,7 +36,7 @@ const Education = () => {
   });
   return (
     <div>
-      <h2 className="font-bold text-3xl mb-16 w-full md:mb-10">Education</h2>
+      <h2 className="font-bold text-5xl mb-16 w-full md:mb-10">Education</h2>
 
       <div
         ref={ref}

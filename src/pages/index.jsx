@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 
 import { LinkArrow } from "../components/Icons";
+import { skills } from "@/data";
 import Layout from "@/components/Layout";
 import TransitionEffect from "@/components/TransitionEffect";
 import AnimatedText from "../components/AnimatedText";
@@ -11,18 +12,13 @@ import HireMe from "@/components/HireMe";
 import Scroll from "@/components/Scroll";
 import Skill from "@/components/Skill";
 import Education from "@/components/Education";
-import { skills } from "@/data";
 
 // const programing = "/programing.jpg";
 
 export default function Home() {
   const containerRef = useRef();
-
-  // const { scrollYProgress } = useScroll({ container: containerRef });
-
   const skillRef = useRef();
 
-  // const isSkillRefInView = useInView(skillRef, {once:true});
   const isSkillRefInView = useInView(skillRef, { margin: "-100px" });
 
   return (
@@ -90,7 +86,7 @@ export default function Home() {
                   My Works
                 </Link>
               </div>
-              <div className="flex flex-col gap-12 justify-center mt-8">
+              <div className="mt-8">
                 <Scroll />
               </div>
               <div
@@ -101,7 +97,7 @@ export default function Home() {
                   initial={{ x: "-300px" }}
                   animate={isSkillRefInView ? { x: 0 } : {}}
                   transition={{ delay: 0.2 }}
-                  className="font-bold text-2xl"
+                  className="font-bold text-4xl"
                 >
                   SKILLS
                 </motion.h1>
@@ -118,14 +114,13 @@ export default function Home() {
                     />
                   ))}
                 </motion.div>
-                <div className="flex flex-col gap-12 justify-center items-center  mt-8">
+                <div className="flex flex-col gap-12 justify-center items-center ">
                   <Scroll />
                 </div>
                 <Education />
               </div>
             </div>
           </div>
-          {/* <About /> */}
         </Layout>
 
         <HireMe />
