@@ -7,9 +7,11 @@ const Footer = () => {
     dark:border-light dark:text-light"
     >
       <Layout className="py-8 flex items-center justify-between md:flex-row xs:py-6 xs:flex-col">
-        <span>{new Date().getFullYear()} &copy; All Rights Resarved.</span>
+        <span className="text-sm md:text-lg">
+          {new Date().getFullYear()} &copy; All Rights Resarved.
+        </span>
         <div className="flex items-center lg:py-2">
-          <span className="text-lg md:text-2xl px-1">Build By Maor Saadia</span>
+          <span className="text-sm md:text-2xl px-1">Build By Maor Saadia</span>
         </div>
         {/* <Link
           href="/"

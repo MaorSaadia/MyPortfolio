@@ -31,7 +31,7 @@ export default function Home() {
       <main className="flex items-center text-dark w-full min-h-screen dark:text-light">
         <Layout className="pt-0 md:pt-16 sm:pt-8">
           <div
-            className="flex items-center justify-between w-full lg:flex-col"
+            className="flex items-center justify-between w-full flex-col"
             ref={containerRef}
           >
             <div className="w-1/2 md:w-full">
@@ -47,7 +47,7 @@ export default function Home() {
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
               /> */}
             </div>
-            <div className="flex flex-col items-center self-center lg:w-full lg:text-center">
+            <div className="flex flex-col items-center self-center w-full text-center">
               <AnimatedText
                 text="Hi, I Am Maor Saadia"
                 className="!text-6xl !text-left 
