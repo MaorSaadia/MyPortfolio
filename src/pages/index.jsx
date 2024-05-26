@@ -1,25 +1,20 @@
 import Head from "next/head";
 import Link from "next/link";
 import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
 
 import { LinkArrow } from "@/components/Icons";
-import { LampContainer } from "@/ui/Lamp";
 import { FlipWords } from "@/ui/FlipWords";
-import { skills } from "@/data";
 import Layout from "@/components/Layout";
 import TransitionEffect from "@/components/TransitionEffect";
 import Scroll from "@/components/Scroll";
-import Skill from "@/components/Skill";
 import Education from "@/components/Education";
+import AnimatedText from "@/components/AnimatedText";
+import SkillsList from "@/components/SkillsList";
 
 // const programing = "/programing.jpg";
 
 export default function Home() {
   const containerRef = useRef();
-  const skillRef = useRef();
-
-  const isSkillRefInView = useInView(skillRef, { margin: "-100px" });
 
   const words = ["Frontend", "Backend", "Application"];
 
@@ -50,27 +45,14 @@ export default function Home() {
               /> */}
             </div>
             <div className="flex flex-col md:items-center md:self-center md:w-full md:text-center">
-              <LampContainer>
-                <motion.h1
-                  initial={{ opacity: 0.5, y: 100 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{
-                    delay: 0.3,
-                    duration: 0.8,
-                    ease: "easeInOut",
-                  }}
-                  className="mt-8 bg-gradient-to-br from-slate-400 to-slate-700 dark:from-slate-200 dark:to-slate-500 bg-clip-text text-center font-medium tracking-tight text-transparent text-4xl md:text-5xl lg:text-7xl"
-                >
-                  Hi, i Am Maor Saadia
-                </motion.h1>
-              </LampContainer>
-              {/* <AnimatedText
-                text="FullStack Developer"
-                className="text-slate-500 dark:text-slate-300 xs:text-2xl md:text-4xl lg:text-5xl"
-              /> */}
+              <AnimatedText
+                text="Hi, i Am Maor Saadia"
+                className="xs:text-2xl sm:text-4xl md:text-5xl lg:text-7xl mt-8 bg-gradient-to-br from-slate-400 to-slate-700 dark:from-slate-200 dark:to-slate-500 bg-clip-text text-center font-medium tracking-tight text-transparent"
+              />
+
               <div className="flex flex-col md:items-center self-center w-full text-center">
-                <div className="xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl mx-auto font-normal text-slate-500 dark:text-slate-300">
-                  A <FlipWords words={words} /> Developer
+                <div className="xs:text-sm sm:text-2xl md:text-4xl lg:text-5xl mx-auto font-normal text-slate-500 dark:text-slate-300">
+                  <FlipWords words={words} /> Developer
                 </div>
               </div>
               <p className="my-4 text-base font-medium xs:text-sm lg:text-2xl">
@@ -85,10 +67,10 @@ export default function Home() {
                 <Link
                   href="MyResume.pdf"
                   target={"_blank"}
-                  className="flex items-center bg-dark text-light p-2.5 px-6
+                  className="flex items-center bg-slate-500 text-light p-2.5 px-6
                     rounded-lg text-lg font-semibold hover:bg-light hover:text-dark
                     border-2 border-solid border-transparent hover:border-dark
-                    dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light
+                    dark:bg-slate-300 dark:text-dark hover:dark:bg-slate-500 hover:dark:text-light hover:dark:border-light
                     "
                 >
                   Resume <LinkArrow className={"w-6 ml-1"} />
@@ -96,7 +78,7 @@ export default function Home() {
                 <Link
                   href="/projects"
                   target={"_blank"}
-                  className="ml-4 xs:text-sm font-medium capitalize text-dark underline dark:text-light md:text-base"
+                  className="ml-4 xs:text-sm font-medium capitalize text-slate-600 underline dark:text-slate-300 md:text-base"
                 >
                   My Works
                 </Link>
@@ -104,31 +86,8 @@ export default function Home() {
               <div className="flex flex-col mt-8 justify-center items-center">
                 <Scroll />
               </div>
-              <div
-                className="flex flex-col gap-12 justify-center mt-8"
-                ref={skillRef}
-              >
-                <motion.h1
-                  initial={{ x: "-300px" }}
-                  animate={isSkillRefInView ? { x: 0 } : {}}
-                  transition={{ delay: 0.2 }}
-                  className="font-bold text-4xl"
-                >
-                  SKILLS
-                </motion.h1>
-                <motion.div
-                  initial={{ x: "-300px" }}
-                  animate={isSkillRefInView ? { x: 0 } : {}}
-                  className="flex gap-4 flex-wrap"
-                >
-                  {skills.map((skill, index) => (
-                    <Skill
-                      key={index}
-                      name={skill}
-                      isSkillRefInView={isSkillRefInView}
-                    />
-                  ))}
-                </motion.div>
+              <div className="flex flex-col gap-12 justify-center mt-8">
+                <SkillsList />
                 <div className="flex flex-col gap-12 justify-center items-center">
                   <Scroll />
                 </div>

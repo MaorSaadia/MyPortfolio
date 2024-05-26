@@ -36,7 +36,9 @@ const Education = () => {
   });
   return (
     <div>
-      <h2 className="font-bold text-5xl mb-16 w-full md:mb-10">Education</h2>
+      <h2 className="font-bold text-5xl mb-16 w-full bg-gradient-to-br from-slate-400 to-slate-700 dark:from-slate-200 dark:to-slate-500 bg-clip-text text-center tracking-tight text-transparent">
+        Education
+      </h2>
 
       <div
         ref={ref}
