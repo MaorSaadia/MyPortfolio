@@ -33,7 +33,7 @@ export const projects = [
   {
     id: 3,
     title: "Portfolio Site",
-    des: "My Portfolio Page Using Next.js Animated, Framer Motion & Tailwind CSS.\nRespnsive Site Including DarkTheme Mode",
+    des: "My Portfolio Page - built with Next.js, featuring dynamic animations using Framer Motion and styled with Tailwind CSS. This responsive site includes a dark theme mode for a beautiful and comfortable browsing experience.",
     img: "/images/MyPortfolio.png",
     iconLists: [
       "/icons/next.svg",

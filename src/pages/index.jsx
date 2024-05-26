@@ -56,14 +56,16 @@ export default function Home() {
                 className="text-base xs:text-2xl md:text-4xl lg:text-5xl"
               />
               <p className="my-4 text-base font-medium xs:text-sm lg:text-2xl">
-                Software Engineer Developer with Ex pertise in The MERN
-                (MongoDB, Express.js, React.js, Node.js). I love developing
-                websites and applications that create meaningful user
-                experiences and expand my knowledge in new modern technologies.
+                Software Engineer Developer with expertise in Frontend, Backend,
+                and App development, specializing in the MERN Stack (MongoDB,
+                Express.js, React.js/React Native, Node.js). Passionate about
+                creating websites and applications that create meaningful user
+                experiences, I continuously seek to expand my knowledge in
+                cutting-edge technologies.
               </p>
               <div className="flex items-center self-start mt-2 lg:self-center">
                 <Link
-                  href="myresume.pdf"
+                  href="MyResume.pdf"
                   target={"_blank"}
                   className="flex items-center bg-dark text-light p-2.5 px-6
                     rounded-lg text-lg font-semibold hover:bg-light hover:text-dark
