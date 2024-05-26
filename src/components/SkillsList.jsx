@@ -4,7 +4,7 @@ import React, { useRef } from "react";
 import Skill from "@/components/Skill";
 import { skills } from "@/data";
 
-const Skills = () => {
+const SkillsList = () => {
   const skillRef = useRef();
 
   const isSkillRefInView = useInView(skillRef, { margin: "-100px" });
@@ -32,4 +32,4 @@ const Skills = () => {
   );
 };
 
-export default Skills;
+export default SkillsList;
