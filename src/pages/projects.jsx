@@ -6,8 +6,8 @@ import TransitionEffect from "@/components/TransitionEffect";
 
 const Projects = () => {
   return (
-    <div className="h-full overflow-x-hidden lg:flex justify-center">
-      <div className="py-10">
+    <div className="h-full lg:flex justify-center">
+      <div className="py-1">
         <div className="flex items-center justify-center xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-center dark:text-white">
           My Works
         </div>

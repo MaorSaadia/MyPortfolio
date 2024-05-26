@@ -28,6 +28,7 @@ const RecentProjects = () => {
                 <CardItem
                   as={Link}
                   href={item.link}
+                  target="__blank"
                   translateZ="100"
                   className="w-full mt-4"
                 >
@@ -70,15 +71,18 @@ const RecentProjects = () => {
                 </div>
 
                 <div className="flex justify-between items-center mt-2">
-                  <CardItem
-                    translateZ={20}
-                    as={Link}
-                    href="https://twitter.com/mannupaaji"
-                    target="__blank"
-                    className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
-                  >
-                    Live Site →
-                  </CardItem>
+                  {!item.link.startsWith("https://github.com") && (
+                    <CardItem
+                      translateZ={20}
+                      as={Link}
+                      href={item.link}
+                      target="__blank"
+                      className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
+                    >
+                      Live Site →
+                    </CardItem>
+                  )}
+
                   <CardItem
                     as={Link}
                     href={item.git}
@@ -93,7 +97,6 @@ const RecentProjects = () => {
           </div>
         ))}
       </div>
-      <div className="h-20"></div>
     </>
   );
 };
