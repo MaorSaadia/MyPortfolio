@@ -51,7 +51,7 @@ export default function Home() {
               />
 
               <div className="flex flex-col md:items-center self-center w-full text-center">
-                <div className="xs:text-sm sm:text-2xl md:text-4xl lg:text-5xl mx-auto font-normal text-slate-500 dark:text-slate-300">
+                <div className="xs:text-lg sm:text-2xl md:text-4xl lg:text-5xl mx-auto font-normal text-slate-500 dark:text-slate-300">
                   <FlipWords words={words} /> Developer
                 </div>
               </div>
