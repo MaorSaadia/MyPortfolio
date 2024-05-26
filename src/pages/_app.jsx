@@ -7,7 +7,6 @@ import Head from "next/head";
 
 import NavBar from "/src/components/NavBar";
 import Footer from "@/components/Footer";
-import HireMe from "@/components/HireMe";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -32,7 +31,6 @@ export default function App({ Component, pageProps }) {
         <AnimatePresence mode="wait">
           <Component key={router.asPath} {...pageProps} />
         </AnimatePresence>
-        <HireMe />
 
         <Footer />
       </main>

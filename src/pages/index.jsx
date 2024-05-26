@@ -10,6 +10,7 @@ import Scroll from "@/components/Scroll";
 import Education from "@/components/Education";
 import AnimatedText from "@/components/AnimatedText";
 import SkillsList from "@/components/SkillsList";
+import HireMe from "@/components/HireMe";
 
 // const programing = "/programing.jpg";
 
@@ -46,7 +47,7 @@ export default function Home() {
             </div>
             <div className="flex flex-col md:items-center md:self-center md:w-full md:text-center">
               <AnimatedText
-                text="Hi, i Am Maor Saadia"
+                text="Hi, I'm Maor Saadia"
                 className="xs:text-2xl sm:text-4xl md:text-5xl lg:text-7xl mt-8 bg-gradient-to-br from-slate-400 to-slate-700 dark:from-slate-200 dark:to-slate-500 bg-clip-text text-center font-medium tracking-tight text-transparent"
               />
 
@@ -96,6 +97,7 @@ export default function Home() {
             </div>
           </div>
         </Layout>
+        <HireMe />
 
         {/* <div className="absolute right-8 bottom-8 inline-block w-24 md:hidden">
           <Image src={lightBulb} alt="Tyler" className="w-full h-auto" />
