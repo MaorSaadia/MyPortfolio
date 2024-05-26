@@ -27,7 +27,7 @@ const RecentProjects = () => {
 
                 <CardItem
                   as={Link}
-                  href={item.git}
+                  href={item.link}
                   translateZ="100"
                   className="w-full mt-4"
                 >

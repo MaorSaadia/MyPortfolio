@@ -1,57 +1,41 @@
+import { motion } from "framer-motion";
+
 import Layout from "./Layout";
+import { GithubIcon, LinkedInIcon } from "./Icons";
 
 const Footer = () => {
   return (
-    <footer
-      className="w-full border-t-2 border-solid border-dark font-medium text-lg
-    dark:border-light dark:text-light"
-    >
+    <footer className="w-full border-t-2 border-solid border-dark font-medium text-lg dark:border-light dark:text-light">
       <Layout className="flex items-center justify-between md:flex-row md:py-6 xs:py-1 xs:flex-row">
         <span className="text-sm md:text-lg">
-          {new Date().getFullYear()} &copy; All Rights Resarved.
+          {new Date().getFullYear()} &copy; All Rights Reserved.
         </span>
         <div className="flex items-center lg:py-2">
           <span className="text-sm md:text-2xl px-1">Build By Maor Saadia</span>
         </div>
-        {/* <Link
-          href="/"
-          target={"_blank"}
-          className="underline underline-offset-2"
-        >
-          Say Hello
-        </Link> */}
+        <div className="flex">
+          <motion.a
+            whileHover={{ y: -2 }}
+            whileTap={{ scale: 0.9 }}
+            className="w-6 mr-2"
+            href="https://github.com/MaorSaadia"
+            target={"_blank"}
+          >
+            <GithubIcon />
+          </motion.a>
+          <motion.a
+            whileHover={{ y: -2 }}
+            whileTap={{ scale: 0.9 }}
+            className="w-6 ml-2"
+            href="https://www.linkedin.com/in/maor-saadia-2022b7289/"
+            target={"_blank"}
+          >
+            <LinkedInIcon />
+          </motion.a>
+        </div>
       </Layout>
     </footer>
   );
 };
 
 export default Footer;
-
-// import React from "react";
-// import Link from "next/link";
-// import Layout from "./layout";
-
-// const Footer = () => {
-//   return (
-//     <footer className="w-full border-t-2 border-solid border-dark font-medium text-lg dark:text-light dark:border-light sm:text-base">
-//       <Layout className="py-8 flex items-center justify-between lg:py-6 lg:flex-col">
-//         <span>{new Date().getFullYear()} &copy; All Rights Reserved.</span>
-//         <div className="flex items-center lg:py-2">
-//           Built With <span className="text-primary dark:text-primaryDark text-2xl px-1">&#9825;</span>
-//           <Link href="/" className="underline underline-offset-2">
-//             By Brian
-//           </Link>
-//         </div>
-//         <Link
-//           href="/"
-//           target={"_blank"}
-//           className="underline underline-offset-2"
-//         >
-//           Say Hello
-//         </Link>
-//       </Layout>
-//     </footer>
-//   );
-// };
-
-// export default Footer;

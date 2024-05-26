@@ -11,7 +11,7 @@ export const projects = [
       "/icons/bootstrap.svg",
       "/icons/jwt.svg",
     ],
-    link: "/ui.earth.com",
+    link: "https://team12-tc0h.onrender.com",
     git: "https://github.com/MaorSaadia/SCEWMS",
   },
   {

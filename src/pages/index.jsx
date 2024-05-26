@@ -8,7 +8,6 @@ import { skills } from "@/data";
 import Layout from "@/components/Layout";
 import TransitionEffect from "@/components/TransitionEffect";
 import AnimatedText from "../components/AnimatedText";
-import HireMe from "@/components/HireMe";
 import Scroll from "@/components/Scroll";
 import Skill from "@/components/Skill";
 import Education from "@/components/Education";
@@ -119,7 +118,6 @@ export default function Home() {
           </div>
         </Layout>
 
-        <HireMe />
         {/* <div className="absolute right-8 bottom-8 inline-block w-24 md:hidden">
           <Image src={lightBulb} alt="Tyler" className="w-full h-auto" />
         </div> */}
