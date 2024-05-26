@@ -3,11 +3,12 @@ import Link from "next/link";
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 
-import { LinkArrow } from "../components/Icons";
+import { LinkArrow } from "@/components/Icons";
+import { LampContainer } from "@/ui/Lamp";
+import { FlipWords } from "@/ui/FlipWords";
 import { skills } from "@/data";
 import Layout from "@/components/Layout";
 import TransitionEffect from "@/components/TransitionEffect";
-import AnimatedText from "../components/AnimatedText";
 import Scroll from "@/components/Scroll";
 import Skill from "@/components/Skill";
 import Education from "@/components/Education";
@@ -19,6 +20,8 @@ export default function Home() {
   const skillRef = useRef();
 
   const isSkillRefInView = useInView(skillRef, { margin: "-100px" });
+
+  const words = ["Frontend", "Backend", "Application"];
 
   return (
     <>
@@ -47,14 +50,29 @@ export default function Home() {
               /> */}
             </div>
             <div className="flex flex-col md:items-center md:self-center md:w-full md:text-center">
-              <AnimatedText
-                text="Hi, I Am Maor Saadia"
-                className="text-base xs:text-4xl md:text-5xl lg:text-7xl"
-              />
-              <AnimatedText
+              <LampContainer>
+                <motion.h1
+                  initial={{ opacity: 0.5, y: 100 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{
+                    delay: 0.3,
+                    duration: 0.8,
+                    ease: "easeInOut",
+                  }}
+                  className="mt-8 bg-gradient-to-br from-slate-400 to-slate-700 dark:from-slate-200 dark:to-slate-500 bg-clip-text text-center font-medium tracking-tight text-transparent text-4xl md:text-5xl lg:text-7xl"
+                >
+                  Hi, i Am Maor Saadia
+                </motion.h1>
+              </LampContainer>
+              {/* <AnimatedText
                 text="FullStack Developer"
-                className="text-base xs:text-2xl md:text-4xl lg:text-5xl"
-              />
+                className="text-slate-500 dark:text-slate-300 xs:text-2xl md:text-4xl lg:text-5xl"
+              /> */}
+              <div className="flex flex-col md:items-center md:self-center md:w-full md:text-center">
+                <div className="xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl mx-auto font-normal text-slate-500 dark:text-slate-300">
+                  A <FlipWords words={words} /> Developer
+                </div>
+              </div>{" "}
               <p className="my-4 text-base font-medium xs:text-sm lg:text-2xl">
                 Software Engineer Developer with expertise in Frontend, Backend,
                 and App development, specializing in the MERN Stack (MongoDB,

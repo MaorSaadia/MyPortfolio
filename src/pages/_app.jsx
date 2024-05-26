@@ -1,10 +1,12 @@
 import "@/styles/globals.css";
+
 import { Montserrat } from "next/font/google";
+import { useRouter } from "next/router";
+import { AnimatePresence } from "framer-motion";
 import Head from "next/head";
+
 import NavBar from "/src/components/NavBar";
 import Footer from "@/components/Footer";
-import { AnimatePresence } from "framer-motion";
-import { useRouter } from "next/router";
 import HireMe from "@/components/HireMe";
 
 const montserrat = Montserrat({
