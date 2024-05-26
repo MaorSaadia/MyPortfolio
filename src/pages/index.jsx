@@ -68,11 +68,11 @@ export default function Home() {
                 text="FullStack Developer"
                 className="text-slate-500 dark:text-slate-300 xs:text-2xl md:text-4xl lg:text-5xl"
               /> */}
-              <div className="flex flex-col md:items-center md:self-center md:w-full md:text-center">
+              <div className="flex flex-col md:items-center self-center w-full text-center">
                 <div className="xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl mx-auto font-normal text-slate-500 dark:text-slate-300">
                   A <FlipWords words={words} /> Developer
                 </div>
-              </div>{" "}
+              </div>
               <p className="my-4 text-base font-medium xs:text-sm lg:text-2xl">
                 Software Engineer Developer with expertise in Frontend, Backend,
                 and App development, specializing in the MERN Stack (MongoDB,
