@@ -10,12 +10,12 @@ export const CardContainer = ({ children, className, containerClassName }) => {
   const [isMouseEntered, setIsMouseEntered] = useState(false);
 
   const handleMouseMove = (e) => {
-    if (!containerRef.current) return;
-    const { left, top, width, height } =
-      containerRef.current.getBoundingClientRect();
-    const x = (e.clientX - left - width / 2) / 25;
-    const y = (e.clientY - top - height / 2) / 25;
-    containerRef.current.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
+    // if (!containerRef.current) return;
+    // const { left, top, width, height } =
+    //   containerRef.current.getBoundingClientRect();
+    // const x = (e.clientX - left - width / 2) / 25;
+    // const y = (e.clientY - top - height / 2) / 25;
+    // containerRef.current.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
   };
 
   const handleMouseEnter = (e) => {
