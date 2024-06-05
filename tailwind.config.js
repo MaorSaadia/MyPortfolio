@@ -14,7 +14,12 @@ module.exports = {
       //     "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       // },
       fontSize: {
-        xxs: "0.5rem",
+        xxs: [
+          "0.5rem",
+          {
+            lineHeight: "0.75rem",
+          },
+        ],
       },
       screens: {
         xs: "360px", // min-width

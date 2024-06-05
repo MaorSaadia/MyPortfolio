@@ -10,7 +10,7 @@ const Footer = () => {
         <span className="sm:text-xs xs:text-xxs md:text-lg">
           {new Date().getFullYear()} &copy; All Rights Reserved.
         </span>
-        <div className="flex lg:py-2">
+        <div className="flex mb-1 lg:py-2">
           <span className="xs:text-xxs sm:text-sm md:text-2xl px-1">
             Build By Maor Saadia
           </span>
