@@ -6,11 +6,11 @@ import { GithubIcon, LinkedInIcon } from "./Icons";
 const Footer = () => {
   return (
     <footer className="w-full border-t-2 border-solid border-dark font-medium text-lg dark:border-light dark:text-light">
-      <Layout className="flex items-center justify-between md:flex-row md:py-6 xs:py-1 xs:flex-col">
-        <span className="text-xs md:text-lg">
+      <Layout className="flex items-center justify-between md:flex-row md:py-6 xs:py-2 xs:flex-col">
+        <span className="text-xs xs:text-xxs md:text-lg">
           {new Date().getFullYear()} &copy; All Rights Reserved.
         </span>
-        <div className="flex items-center lg:py-2">
+        <div className="flex lg:py-2">
           <span className="text-sm md:text-2xl px-1">Build By Maor Saadia</span>
         </div>
         <div className="flex">
