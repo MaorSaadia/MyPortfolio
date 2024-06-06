@@ -2,7 +2,7 @@ export const projects = [
   {
     id: 1,
     title: "FindeRent - Renting Apartment Application",
-    des: " Mobile App platform connecting students with landlords for streamlined apartment near academic institutions, Integrated Google Maps API to provide interactive maps and detailed property listings, enhancing user experience and facilitating informed decisions.\n real-time chat functionality using Socket.io, fostering instant communication between users and facilitating prompt responses, with personalized roommate matching feature.",
+    des: "Mobile App platform connecting students with landlords for streamlined apartment near academic institutions, Integrated Google Maps API to provide interactive maps and detailed property listings, enhancing user experience and facilitating informed decisions.\n real-time chat functionality using Socket.io, fostering instant communication between users and facilitating prompt responses, with personalized roommate matching feature.",
     img: "/images/FindeRent.png",
     iconLists: [
       "/icons/react.svg",

@@ -106,7 +106,7 @@ const NavBar = () => {
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
             className="w-6 mx-3"
-            href="https://www.linkedin.com/in/maor-saadia-2022b7289/"
+            href="https://www.linkedin.com/in/maorsaadia"
             target={"_blank"}
           >
             <LinkedInIcon />
