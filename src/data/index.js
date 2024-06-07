@@ -43,20 +43,22 @@ export const projects = [
     link: "https://maor-saadia-portfolio.vercel.app",
     git: "https://github.com/MaorSaadia/MyPortfolio",
   },
-  // {
-  //   id: 4,
-  //   title: "Animated Apple Iphone 3D Website",
-  //   des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
-  //   img: "/p4.svg",
-  //   iconLists: [
-  //     "/icons/next.svg",
-  //     "/icons/tail.svg",
-  //     "/icons/ts.svg",
-  //     "/icons/three.svg",
-  //   ],
-  //   link: "/ui.apple.com",
-  //   git: "/",
-  // },
+  {
+    id: 4,
+    title: "Travel+ - Destinations Website Project",
+    des: "Travels website that i created in one my of courses in SCE College, the website included place to travel with descripation of the place including booking option with paypal payment option",
+    img: "/images/Travel.png",
+    iconLists: [
+      "/icons/react.svg",
+      "/icons/nodejs.svg",
+      "/icons/mongodb.svg",
+      "/icons/redux.svg",
+      "/icons/bootstrap.svg",
+      "/icons/jwt.svg",
+    ],
+    link: "https://github.com/MaorSaadia/Travel",
+    git: "https://github.com/MaorSaadia/Travel",
+  },
 ];
 
 export const skills = [
