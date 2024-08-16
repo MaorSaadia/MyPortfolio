@@ -3,6 +3,7 @@ import "@/styles/globals.css";
 import { Montserrat } from "next/font/google";
 import { useRouter } from "next/router";
 import { AnimatePresence } from "framer-motion";
+import { Analytics } from "@vercel/analytics/react";
 import Head from "next/head";
 
 import NavBar from "/src/components/NavBar";
@@ -21,6 +22,7 @@ export default function App({ Component, pageProps }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Analytics />
       <main
         className={`${montserrat.variable} font-mont bg-light dark:bg-dark w-full min-h-screen`}
       >
