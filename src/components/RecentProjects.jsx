@@ -82,7 +82,17 @@ const RecentProjects = () => {
                       Live Site →
                     </CardItem>
                   )}
-
+                  {item.demo && (
+                    <CardItem
+                      translateZ={20}
+                      as={Link}
+                      href={item.demo}
+                      target="__blank"
+                      className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
+                    >
+                      Demo →
+                    </CardItem>
+                  )}
                   <CardItem
                     as={Link}
                     href={item.git}

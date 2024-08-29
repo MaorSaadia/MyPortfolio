@@ -14,6 +14,7 @@ export const projects = [
     ],
     link: "https://github.com/FinderRent",
     git: "https://github.com/FinderRent",
+    demo: "https://www.youtube.com/watch?v=qAoGZq1lOSU&t=3s",
   },
   {
     id: 2,
@@ -27,7 +28,7 @@ export const projects = [
       "/icons/bootstrap.svg",
       "/icons/jwt.svg",
     ],
-    link: "https://team12-tc0h.onrender.com",
+    link: "https://github.com/MaorSaadia/SCEWMS",
     git: "https://github.com/MaorSaadia/SCEWMS",
   },
   {
